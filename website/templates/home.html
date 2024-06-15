@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 
 <div class="col-md-6 offset-md-3">
 
     <h1>LOGIN</h1>
 
-<form method="POST" action="{% url 'home'%}"></form>
-    {% csrf_token %}
-    <div class="mb-3">
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 {% endblock %}
