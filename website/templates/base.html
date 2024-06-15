@@ -10,6 +10,11 @@
     {% include 'navbar.html' %}
     <div class="container">
         <br>
+        {% if messages %}
+        {%for mess in messages%}
+          {{mess}}
+        {% endfor %}
+        {% endif %}
         {% block content %}
         {% endblock %}
     </div>
