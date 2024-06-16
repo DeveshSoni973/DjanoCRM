@@ -29,4 +29,14 @@ def logout_user(request):
     return redirect('home')
 
 def register_user(request):
-    pass
+    return render(request, 'register.html', {})
+
+
+'''In the register_user function, the {} is used to pass context data to the template. The render function in Django takes at least three arguments:
+
+The request object, which represents the HTTP request.
+The path to the template file as a string.
+A dictionary ({} in your example) that contains context data to be used in the template
+'''
+
+
