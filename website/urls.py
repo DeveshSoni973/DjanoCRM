@@ -6,3 +6,6 @@ path('logout/',  views.logout_user, name='logout'),
 path('register/',  views.register_user, name='register'),
 
 ]
+'''In a Django project, the urls.py file is essential for routing URLs to the appropriate views. 
+It acts as a map for the application, directing incoming web requests to the 
+correct view based on the URL pattern. '''
