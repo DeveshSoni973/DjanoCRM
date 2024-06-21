@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<div class="col-md-6 offset-md-3">
+
     {% if user.is_authenticated  %}
     <h1>Records... </h1>
 
-    <table class="table table-striped table-hover table-bordered table-hover">
+    <table class="table table-striped table-hover table-bordered">
         <thead class="table-dark">
           <tr>
             <th scope="col">UserName</th>
@@ -38,6 +38,7 @@
 
 
     {% else %}
+<div class="col-md-6 offset-md-3 table-responsive">
     <h1>LOGIN</h1>
 
     <form method="POST" action="{% url 'home' %}">
