@@ -9,6 +9,7 @@
     <table class="table table-striped table-hover table-bordered">
         <thead class="table-dark">
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">UserName</th>
             <th scope="col">Name</th>
             <th scope="col">Created At</th>
@@ -22,7 +23,8 @@
     {% if records %}
         {% for record in records %}
             <tr>
-                <td>{{record.user}}</td>
+                <td><a href="{% url 'record' record.id%}">{{record.id}}</a></td>
+                <td>{{record.user}}</a></td>
                 <td>{{record.first_name}} {{record.last_name}}</td>
                 <td>{{record.created_at}}</td>
                 <td>{{record.email}}</td>
