@@ -8,8 +8,6 @@ from .models import Record
 def home(request):
     #check for logging in
     records=Record.objects.all()
-
-
     if request.method=="POST":
         username=request.POST['username']
         password=request.POST['password']
@@ -24,9 +22,6 @@ def home(request):
 
     else:
         return render(request, 'home.html', {'records': records})
-
-# def login_user(request):
-#     pass
 
 def logout_user(request):
     logout(request)
